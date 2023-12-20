@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "python-cli-template"
+name = "nvd-api"
 version = "0.1.0"
-description = "Python CLI starter template"
+description = "Python CLI to use the NVD API"
 authors = ["Dan Frederick <dpfrederick@webstaurantstore.com>"]
 license = "AGPL"
 readme = "README.md"
@@ -10,17 +10,22 @@ readme = "README.md"
 python = "^3.11"
 python-dotenv = "^1.0.0"
 poethepoet = "^0.24.0"
+pydantic = "^2.5.2"
+requests = "^2.31.0"
 
 
 [tool.poetry.group.dev.dependencies]
 flake8 = "^6.1.0"
 black = "^23.7.0"
+pytest = "^7.4.3"
 
 [tool.poetry.scripts]
 lint = "local.lint:main"
 
 [tool.poe.tasks]
 lint = "flake8 src"
+test = "pytest -v"
+check-tests = "pytest --collect-only -v"
 
 [tool.ruff]
 line-length = 150
