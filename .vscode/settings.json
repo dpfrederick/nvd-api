@@ -20,5 +20,9 @@
         "editor.codeActionsOnSave": {
             "source.organizeImports": "explicit"
         }
-    }
+    },
+    "cSpell.words": [
+        "pydantic",
+        "vuln"
+    ]
 }

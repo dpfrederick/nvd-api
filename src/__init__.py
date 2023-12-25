@@ -1,5 +1,4 @@
-from .bom_analyzer import BomAnalyzer
 from .nvd_provider import NVDProvider
-from .types import Bom, Dependency
+from .types import Bom, Dependency, Report, Vulnerability
 
-__all__ = ["Bom", "Dependency", "BomAnalyzer", "NVDProvider"]
+__all__ = ["Bom", "Dependency", "NVDProvider", "Report", "Vulnerability"]

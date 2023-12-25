@@ -2,6 +2,8 @@ import json
 
 import requests
 
+from .types import Vulnerability
+
 
 class NVDProvider:
     def __init__(self, nvd_api_token: str):
@@ -14,5 +16,4 @@ class NVDProvider:
         headers = {"x-api-key": self.nvd_api_token}
 
         response = requests.request("GET", url, headers=headers, data=payload)
-
-        return response
+        return Vulnerability(json.loads(response.text)["vulnerabilities"])
