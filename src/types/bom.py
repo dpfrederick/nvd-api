@@ -15,4 +15,4 @@ class Bom(BaseModel):
     dependencies: list[Dependency]
 
     def __str__(self):
-        return f"timestamp: {self.timestamp},\nproject name: {self.component_name},\nnumber of dependencies={self.dependencies.count})"
+        return f"timestamp: {self.timestamp}\nproject name: {self.component_name}\nnumber of dependencies: {len(self.dependencies)}"

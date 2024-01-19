@@ -22,7 +22,9 @@
         }
     },
     "cSpell.words": [
+        "dotenv",
         "pydantic",
-        "vuln"
+        "vuln",
+        "vulns"
     ]
 }
